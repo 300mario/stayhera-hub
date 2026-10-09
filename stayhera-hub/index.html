@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스테이헤라 — 숙소 링크</title>
+<style>
+  :root { --green:#54bd67; --blue:#2778d1; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; background:#f6f8f7; color:#222; }
+  .wrap { max-width:520px; margin:0 auto; padding:20px 16px 40px; }
+  header { text-align:center; padding:18px 0 6px; }
+  header h1 { font-size:26px; letter-spacing:-0.5px; }
+  header h1 .dot { color:var(--green); }
+  header p { margin-top:6px; font-size:16px; color:#666; }
+  .search { margin:16px 0 6px; }
+  .search input { width:100%; padding:13px 16px; font-size:17px; border:1.5px solid #e2e8e6; border-radius:14px; outline:none; background:#fff; }
+  .search input:focus { border-color:var(--green); }
+  .section-title { margin:18px 4px 10px; font-size:17px; font-weight:700; color:#444; }
+  .card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:16px; }
+  .card img { width:100%; height:220px; object-fit:cover; display:block; }
+  .card-body { padding:16px; }
+  .badge { display:inline-block; background:var(--green); color:#fff; font-size:14px; font-weight:700; padding:4px 10px; border-radius:20px; margin-bottom:8px; }
+  .card h2 { font-size:21px; letter-spacing:-0.3px; margin-bottom:4px; }
+  .price { font-size:18px; font-weight:700; color:var(--blue); margin-bottom:4px; }
+  .rating { font-size:15px; color:#888; margin-bottom:10px; }
+  .feats { list-style:none; font-size:16px; color:#555; margin-bottom:14px; }
+  .feats li { padding:3px 0; }
+  .feats li::before { content:"✔ "; color:var(--green); font-weight:700; }
+  .btn { display:block; text-align:center; background:var(--green); color:#fff; font-size:19px; font-weight:700; padding:14px; border-radius:14px; text-decoration:none; }
+  .btn:active { opacity:.85; }
+  .empty { text-align:center; color:#999; font-size:16px; padding:30px 0; display:none; }
+  footer { margin-top:26px; text-align:center; font-size:13px; color:#aaa; line-height:1.6; padding:0 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>스테이헤라<span class="dot">.</span></h1>
+    <p>영상 속 번호로 바로 찾으세요</p>
+  </header>
+
+  <div class="search">
+    <input id="q" type="text" placeholder="숙소 번호 또는 이름 검색 (예: 001, 여수)" oninput="filter()">
+  </div>
+
+  <div class="section-title">최근 소개한 숙소</div>
+  <div id="list">
+
+<!-- #009 트리하우스 빌라 코야오노이 -->
+<div class="card" data-key="009 트리하우스 treehouse koh yao noi 코야오노이 태국">
+  <img src="treehouse.webp" alt="트리하우스 빌라 코야오노이 프라이빗 풀빌라">
+  <div class="card-body">
+    <span class="badge">[009]</span>
+    <h2>TreeHouse Villas Koh Yao · 어덜츠 온리</h2>
+    <div class="price">1박 50만원대~</div>
+    <div class="rating">평점 9.0 · 리뷰 62개</div>
+    <ul class="feats">
+      <li>나무 위 둥지 스위트 + 프라이빗 풀</li>
+      <li>야외 욕실 · 둘만의 프라이빗 세상</li>
+      <li>어른들만의 리조트, 팡아만 오션뷰</li>
+      <li>기간한정 특가 진행 중</li>
+    </ul>
+    <a class="btn" href="https://3ha.in/r/775642">빈 객실 확인하기</a>
+  </div>
+</div>
+
+<!-- #008 사이라군 몰디브 -->
+<div class="card" data-key="008 사이라군 몰디브 saii lagoon maldives hilton">
+  <img src="saii.webp" alt="사이라군 몰디브 프라이빗 풀빌라">
+  <div class="card-body">
+    <span class="badge">[008]</span>
+    <h2>SAii Lagoon Maldives · 힐튼 큐리오</h2>
+    <div class="price">1박 55만원대~</div>
+    <div class="rating">평점 9.6 · 리뷰 140개</div>
+    <ul class="feats">
+      <li>몰디브 라군 한가운데 프라이빗 풀빌라</li>
+      <li>터키석 바다 + 커플 스파</li>
+      <li>커플여행 가성비 끝판왕</li>
+      <li>기간한정 특가 진행 중</li>
+    </ul>
+    <a class="btn" href="https://3ha.in/r/775195">빈 객실 확인하기</a>
+  </div>
+</div>
+
+<!-- #007 키말라 푸켓 — index.html의 <div id="list"> 맨 앞에 삽입 -->
+<div class="card" data-key="007 키말라 푸켓 카말라 태국 keemala phuket kamala">
+  <img src="keemala.webp" alt="키말라 푸켓 둥지 모양 풀빌라">
+  <div class="card-body">
+    <span class="badge">[007]</span>
+    <h2>키말라 · 푸켓 카말라</h2>
+    <div class="price">1박 110만원대~</div>
+    <div class="rating">평점 9.3 · 리뷰 1,065개</div>
+    <ul class="feats">
+      <li>새 둥지 모양 객실 · 38개 전부 풀빌라</li>
+      <li>카말라 정글 속 프라이빗 리조트</li>
+      <li>푸켓 공항에서 차로 약 46분</li>
+      <li>11월 건기 시작, 지금이 기회</li>
+    </ul>
+    <a class="btn" href="https://3ha.in/r/772980">빈 객실 확인하기</a>
+  </div>
+</div>
+
+<!-- #006 허브 카드 — index.html의 <div id="list"> 맨 앞에 삽입 -->
+<div class="card" data-key="006 샹그릴라 보라카이 야팍 필리핀 shangri-la boracay">
+  <img src="boracay.webp" alt="샹그릴라 보라카이 야팍 전경">
+  <div class="card-body">
+    <span class="badge">[006]</span>
+    <h2>샹그릴라 보라카이 · 야팍</h2>
+    <div class="price">1박 45만원대~</div>
+    <div class="rating">평점 9.3 · 리뷰 148개</div>
+    <ul class="feats">
+      <li>야팍 절벽 위 리조트 · 전용 디니위드 비치</li>
+      <li>프라이빗 플런지풀 로프트 빌라</li>
+      <li>화이트비치·디몰 차로 약 15분</li>
+      <li>11월 건기 시작, 지금이 기회</li>
+    </ul>
+    <a class="btn" href="https://3ha.in/r/771754">빈 객실 확인하기</a>
+  </div>
+</div>
+
+    <div class="card" data-key="005 불가리 리조트 발리 울루와투 bulgari resort bali">
+      <img src="bulgari.webp" alt="불가리 리조트 발리 절벽 리조트">
+      <div class="card-body">
+        <span class="badge">[005]</span>
+        <h2>불가리 리조트 발리 · 울루와투</h2>
+        <div class="price">1박 250만원대~</div>
+        <div class="rating">평점 9.5 · 리뷰 248개</div>
+        <ul class="feats">
+          <li>해발 150m 절벽 위 이탈리아 럭셔리</li>
+          <li>절벽 인피니티풀의 원조</li>
+          <li>울루와투 사원·파당파당 비치 인근</li>
+          <li>Savaya 비치클럽 차로 15분</li>
+        </ul>
+        <a class="btn" href="https://3ha.in/r/771131">빈 객실 확인하기</a>
+      </div>
+    </div>
+
+    <div class="card" data-key="004 인터컨티넨탈 다낭 선페닌슐라 다낭 베트남 intercontinental danang">
+      <img src="danang.webp" alt="인터컨티넨탈 다낭 정글 리조트">
+      <div class="card-body">
+        <span class="badge">[004]</span>
+        <h2>인터컨티넨탈 다낭 선 페닌슐라 · 다낭</h2>
+        <div class="price">1박 55만원대~</div>
+        <div class="rating">평점 9.5 · 리뷰 370개</div>
+        <ul class="feats">
+          <li>산악열차 타고 들어가는 정글 리조트</li>
+          <li>빌 벤슬리 설계 · 손짜 반도 절벽</li>
+          <li>프라이빗 비치 + 정글 풀빌라</li>
+          <li>미케비치·호이안·바나힐 인근</li>
+        </ul>
+        <a class="btn" href="https://3ha.in/r/769757">빈 객실 확인하기</a>
+      </div>
+    </div>
+
+    <div class="card" data-key="003 프라이빗제트빌라 발리 울루와투 private jet villa">
+      <img src="jetvilla.webp" alt="프라이빗 제트 빌라 절벽 위 비행기">
+      <div class="card-body">
+        <span class="badge">[003]</span>
+        <h2>프라이빗 제트 빌라 · 발리 울루와투</h2>
+        <div class="price">1박 300만원대~</div>
+        <div class="rating">평점 9.5 · 리뷰 7개</div>
+        <ul class="feats">
+          <li>퇴역 보잉 737을 절벽 위에 통째로</li>
+          <li>조종석 자쿠지에서 인도양 일출</li>
+          <li>해발 150m 절벽 위 세계 유일 비행기 빌라</li>
+          <li>울루와투 사원·냥냥비치 인근</li>
+        </ul>
+        <a class="btn" href="https://3ha.in/r/767288">빈 객실 확인하기</a>
+      </div>
+    </div>
+
+    <div class="card" data-key="002 히든클리프 제주 중문 hidden cliff">
+      <img src="cliff.webp" alt="히든클리프 인피니티풀">
+      <div class="card-body">
+        <span class="badge">[002]</span>
+        <h2>히든클리프 호텔&amp;네이처 · 제주 중문</h2>
+        <div class="price">1박 22만원대~</div>
+        <div class="rating">평점 4.3 · 리뷰 996개</div>
+        <ul class="feats">
+          <li>국내 최대 47m 인피니티풀</li>
+          <li>계곡 35m 위 숲속 수영</li>
+          <li>중문관광단지 1.3km</li>
+        </ul>
+        <a class="btn" href="https://3ha.in/r/767172">빈 객실 확인하기</a>
+      </div>
+    </div>
+
+    <div class="card" data-key="001 유탑 마리나 여수 utop marina">
+      <img src="pool.webp" alt="유탑 마리나 인피니티풀">
+      <div class="card-body">
+        <span class="badge">[001]</span>
+        <h2>유탑 마리나 호텔&amp;리조트 · 여수</h2>
+        <div class="price">1박 7만원대~</div>
+        <div class="rating">평점 4.6 · 리뷰 5,013개</div>
+        <ul class="feats">
+          <li>전 객실 테라스 오션뷰</li>
+          <li>오션뷰 인피니티풀</li>
+          <li>1인 요트 무료탑승</li>
+          <li>오동도 차로 5분</li>
+        </ul>
+        <a class="btn" href="https://3ha.in/r/766162">빈 객실 확인하기</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="empty" id="empty">검색 결과가 없어요.</div>
+
+  <footer>
+    이 페이지의 숙소 링크는 제휴 링크입니다.<br>
+    링크를 통해 예약하면 스테이헤라에 소정의 수수료가 지급될 수 있으며, 가격은 날짜·객실에 따라 달라질 수 있어요.<br><br>
+    © 스테이헤라 @stay.he.ra
+  </footer>
+</div>
+
+<script>
+function filter(){
+  var q = document.getElementById('q').value.trim().toLowerCase();
+  var cards = document.querySelectorAll('.card');
+  var shown = 0;
+  cards.forEach(function(c){
+    var hit = !q || c.dataset.key.toLowerCase().includes(q);
+    c.style.display = hit ? '' : 'none';
+    if(hit) shown++;
+  });
+  document.getElementById('empty').style.display = shown ? 'none' : 'block';
+}
+</script>
+</body>
+</html>
